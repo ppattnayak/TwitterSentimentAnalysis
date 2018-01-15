@@ -66,25 +66,6 @@ nokiatweetcorpus <- Corpus(VectorSource(nokiatext)) %>%
 
 
 
-# appletweetcorpus <- tm_map(appletweetcorpus, removePunctuation)
-# appletweetcorpus <- tm_map(appletweetcorpus, removeNumbers)
-# appletweetcorpus <- tm_map(appletweetcorpus, tolower)
-# appletweetcorpus <- tm_map(appletweetcorpus, function(x)removeWords(x,c('the','this',stopwords())))
-# 
-# samsungtweetcorpus <- tm_map(samsungtweetcorpus, removePunctuation)
-# samsungtweetcorpus <- tm_map(samsungtweetcorpus, removeNumbers)
-# samsungtweetcorpus <- tm_map(samsungtweetcorpus, tolower)
-# samsungtweetcorpus <- tm_map(samsungtweetcorpus, function(x)removeWords(x,stopwords()))
-# 
-# oneplustweetcorpus <- tm_map(oneplustweetcorpus, removePunctuation)
-# oneplustweetcorpus <- tm_map(oneplustweetcorpus, removeNumbers)
-# oneplustweetcorpus <- tm_map(oneplustweetcorpus, tolower)
-# oneplustweetcorpus <- tm_map(oneplustweetcorpus, function(x)removeWords(x,c('the','this',stopwords())))
-# 
-# nokiatweetcorpus <- tm_map(nokiatweetcorpus, removePunctuation)
-# nokiatweetcorpus <- tm_map(nokiatweetcorpus, removeNumbers)
-# nokiatweetcorpus <- tm_map(nokiatweetcorpus, tolower)
-# nokiatweetcorpus <- tm_map(nokiatweetcorpus, function(x)removeWords(x,stopwords()))
 
 
 col<- brewer.pal(5,"Set1")
@@ -205,7 +186,7 @@ sentiment.getScore = function(sentences, pos.words, neg.words, .progress='none')
   return(scores.df)
 }
 
-# how many tweets of each country
+# how many tweets of each company
 companytweets_length = c(length(appletext), length(samsungtext), length(oneplustext), length(nokiatext))
 
 # join texts
